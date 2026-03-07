@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Grey's Gift Lodge | Eastern Cape, South Africa</title>
+  <meta name="description" content="Explore the beauty of Grey's Gift Lodge through our gallery — wildlife, landscapes, lodge life, and safari moments from the Eastern Cape." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navigation.css" />
+  <style>
+    /* Gallery filter tabs */
+    .gallery-filters {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: var(--space-xl);
+    }
+
+    .gallery-filter-btn {
+      padding: 0.5rem 1.4rem;
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      background: transparent;
+      border: 1px solid var(--color-border);
+      color: var(--color-text-light);
+      cursor: pointer;
+      border-radius: var(--radius);
+      transition: var(--transition);
+    }
+
+    .gallery-filter-btn:hover,
+    .gallery-filter-btn.is-active {
+      background: var(--color-gold);
+      border-color: var(--color-gold);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header site-header--solid" id="site-header">
+    <div class="container">
+      <div class="topbar">
+        <div class="topbar__inner">
+          <div class="topbar__left">
+            <a href="tel:+27460000000" class="topbar__item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"/></svg>
+              +27 (0)46 000 0000
+            </a>
+            <a href="mailto:info@greysgiftlodge.co.za" class="topbar__item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+              info@greysgiftlodge.co.za
+            </a>
+          </div>
+          <div class="topbar__right">Malaria-Free &bull; Eastern Cape</div>
+        </div>
+      </div>
+      <div class="header-main">
+        <a href="index.html" class="site-logo">
+          <span class="site-logo__name">Grey's Gift Lodge</span>
+          <span class="site-logo__tag">Eastern Cape · South Africa</span>
+        </a>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+          <div class="nav-item nav-item--drop">
+            <a href="about.html" class="nav-link">About <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 011.06 0L10 11.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 9.28a.75.75 0 010-1.06z" clip-rule="evenodd"/></svg></a>
+            <div class="nav-drop"><a href="about.html#the-lodge">The Lodge</a><a href="about.html#our-story">Our Story</a><a href="about.html#location">Location</a></div>
+          </div>
+          <div class="nav-item nav-item--drop">
+            <a href="accommodation.html" class="nav-link">Accommodation <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 011.06 0L10 11.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 9.28a.75.75 0 010-1.06z" clip-rule="evenodd"/></svg></a>
+            <div class="nav-drop"><a href="accommodation.html#rooms">Lodge Rooms</a><a href="accommodation.html#facilities">Facilities</a></div>
+          </div>
+          <div class="nav-item nav-item--drop">
+            <a href="hunting.html" class="nav-link">Hunting <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 011.06 0L10 11.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 9.28a.75.75 0 010-1.06z" clip-rule="evenodd"/></svg></a>
+            <div class="nav-drop"><a href="hunting.html#packages">Safari Packages</a><a href="hunting.html#species">Game Species</a></div>
+          </div>
+          <div class="nav-item nav-item--drop">
+            <a href="experiences.html" class="nav-link">Experiences <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 011.06 0L10 11.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 9.28a.75.75 0 010-1.06z" clip-rule="evenodd"/></svg></a>
+            <div class="nav-drop"><a href="experiences.html#wildlife">Nature &amp; Wildlife</a><a href="experiences.html#family">Family Activities</a><a href="experiences.html#photography">Photography</a></div>
+          </div>
+          <div class="nav-item"><a href="gallery.html" class="nav-link is-active">Gallery</a></div>
+          <div class="nav-item"><a href="contact.html" class="nav-link nav-link--book">Book Now</a></div>
+        </nav>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <div class="mobile-nav__item"><div class="mobile-nav__row"><a href="index.html" class="mobile-nav__link">Home</a></div></div>
+    <div class="mobile-nav__item">
+      <div class="mobile-nav__row"><a href="about.html" class="mobile-nav__link">About</a><button class="mobile-nav__expand" aria-label="Expand">+</button></div>
+      <div class="mobile-nav__sub"><a href="about.html#the-lodge" class="mobile-nav__sub-link">The Lodge</a></div>
+    </div>
+    <div class="mobile-nav__item">
+      <div class="mobile-nav__row"><a href="accommodation.html" class="mobile-nav__link">Accommodation</a><button class="mobile-nav__expand" aria-label="Expand">+</button></div>
+      <div class="mobile-nav__sub"><a href="accommodation.html#rooms" class="mobile-nav__sub-link">Lodge Rooms</a></div>
+    </div>
+    <div class="mobile-nav__item">
+      <div class="mobile-nav__row"><a href="hunting.html" class="mobile-nav__link">Hunting</a><button class="mobile-nav__expand" aria-label="Expand">+</button></div>
+      <div class="mobile-nav__sub"><a href="hunting.html#packages" class="mobile-nav__sub-link">Safari Packages</a></div>
+    </div>
+    <div class="mobile-nav__item">
+      <div class="mobile-nav__row"><a href="experiences.html" class="mobile-nav__link">Experiences</a><button class="mobile-nav__expand" aria-label="Expand">+</button></div>
+      <div class="mobile-nav__sub"><a href="experiences.html#wildlife" class="mobile-nav__sub-link">Nature &amp; Wildlife</a></div>
+    </div>
+    <div class="mobile-nav__item"><div class="mobile-nav__row"><a href="gallery.html" class="mobile-nav__link">Gallery</a></div></div>
+    <a href="contact.html" class="mobile-nav__book">Book Your Safari</a>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <div class="page-hero">
+    <section class="hero hero-gallery hero--short" aria-label="Gallery">
+      <div class="hero__bg"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <span class="hero__label">Through the Lens</span>
+        <h1 class="hero__title">Stories in <em>Images</em></h1>
+        <p class="hero__subtitle">A glimpse into life at Grey's Gift Lodge — wildlife, landscapes, lodge moments, and the soul of the Eastern Cape.</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb__sep">›</li>
+        <li class="breadcrumb__item breadcrumb__item--current">Gallery</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ═══ GALLERY ═══ -->
+  <section class="section">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--space-xl);">
+        <span class="section__label">Photo Gallery</span>
+        <h2 class="section__title section__title--center">Grey's Gift in Pictures</h2>
+        <div class="section__divider section__divider--center"></div>
+        <p class="section__intro section__intro--center">Browse our collection of photography from the farm, the lodge, and the incredible wildlife that calls Grey's Gift home. Replace placeholder images with your own photography when ready.</p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="gallery-filters">
+        <button class="gallery-filter-btn is-active">All</button>
+        <button class="gallery-filter-btn">Wildlife</button>
+        <button class="gallery-filter-btn">Landscapes</button>
+        <button class="gallery-filter-btn">The Lodge</button>
+        <button class="gallery-filter-btn">Hunting</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item--tall">
+          <div class="img-ph" style="height:100%;"></div>
+          <div class="gallery-item__overlay">
+            <div class="gallery-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-ph--brown" style="height:100%;"></div>
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg></div></div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-ph--warm" style="height:100%;"></div>
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg></div></div>
+        </div>
+        <div class="gallery-item gallery-item--wide">
+          <div class="img-ph--dark" style="height:100%;"></div>
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg></div></div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-ph" style="background-image:url('https://picsum.photos/seed/gg-g5/800/600');height:100%;"></div>
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg></div></div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-ph--brown" style="background-image:url('https://picsum.photos/seed/gg-g6/800/600');height:100%;"></div>
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg></div></div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-ph--dark" style="height:100%;"></div>
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg></div></div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-ph--warm" style="height:100%;"></div>
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg></div></div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-ph" style="height:100%;"></div>
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg></div></div>
+        </div>
+      </div>
+
+      <p style="text-align:center;font-size:0.8rem;color:var(--color-text-muted);margin-top:var(--space-lg);">
+        Placeholder images from <a href="https://picsum.photos" target="_blank" rel="noopener noreferrer" style="color:var(--color-gold);">Picsum Photos</a> (free, no sign-up). Swap any image by replacing the seed in the URL, or swap the entire &lt;div&gt; with an &lt;img&gt; tag when you have real photography.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ SOCIAL CTA ═══ -->
+  <section class="section section--cream">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="section__label">Follow Us</span>
+        <h2 class="section__title section__title--center">Stories to Share, to Love</h2>
+        <div class="section__divider section__divider--center"></div>
+        <p class="section__intro section__intro--center">Follow Grey's Gift Lodge on social media for the latest photographs, wildlife sightings, and news from the Eastern Cape.</p>
+        <div style="display:flex;gap:1.5rem;justify-content:center;margin-top:2rem;flex-wrap:wrap;">
+          <a href="https://www.facebook.com/greysgiftlodge/" class="btn btn--outline-dark" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/greysgiftlodge/" class="btn btn--outline-dark" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.youtube.com/channel/UCYD1MvRiYoMQzRl5iA0lKMA" class="btn btn--outline-dark" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <span class="footer__logo-name">Grey's Gift Lodge</span>
+          <span class="footer__logo-tag">Eastern Cape · South Africa</span>
+          <p class="footer__desc">A luxury hunting safari and family lodge nestled in the heart of the malaria-free Eastern Cape. Five generations of heritage, sharing the beauty of the African bush.</p>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/greysgiftlodge/" class="footer__social-btn" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
+            <a href="https://www.instagram.com/greysgiftlodge/" class="footer__social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer">&#9711;</a>
+            <a href="https://www.youtube.com/channel/UCYD1MvRiYoMQzRl5iA0lKMA" class="footer__social-btn" aria-label="YouTube" target="_blank" rel="noopener noreferrer">&#9654;</a>
+          </div>
+        </div>
+        <div>
+          <span class="footer__col-title">Explore</span>
+          <div class="footer__links">
+            <a href="index.html">Home</a><a href="about.html">About the Lodge</a>
+            <a href="accommodation.html">Accommodation</a><a href="hunting.html">Hunting Safaris</a>
+            <a href="experiences.html">Experiences</a><a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+        <div>
+          <span class="footer__col-title">Plan Your Visit</span>
+          <div class="footer__links">
+            <a href="about.html#location">Getting Here</a>
+            <a href="hunting.html#packages">Safari Packages</a>
+            <a href="accommodation.html#facilities">Facilities</a>
+            <a href="experiences.html#family">Family Activities</a>
+            <a href="contact.html">Make an Enquiry</a>
+          </div>
+        </div>
+        <div>
+          <span class="footer__col-title">Find Us</span>
+          <div class="footer__contact-row">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.013 3.5-4.661 3.5-8.327a8 8 0 10-16 0c0 3.666 1.556 6.314 3.5 8.327a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+            <span>Farm Grey's Gift, Eastern Cape<br>South Africa, 6140</span>
+          </div>
+          <div class="footer__contact-row">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"/></svg>
+            <a href="tel:+27460000000">+27 (0)46 000 0000</a>
+          </div>
+          <div class="footer__contact-row">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+            <a href="mailto:info@greysgiftlodge.co.za">info@greysgiftlodge.co.za</a>
+          </div>
+          <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-gold);display:block;margin-top:1.5rem;margin-bottom:0.5rem;">Stay Updated</span>
+          <form class="footer__newsletter-form">
+            <input type="email" class="footer__nl-input" placeholder="Your email address" aria-label="Newsletter email" />
+            <button type="submit" class="footer__nl-btn">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Grey's Gift Lodge. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Gallery filter tabs (visual only for now)
+    document.querySelectorAll('.gallery-filter-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.gallery-filter-btn').forEach(function(b) { b.classList.remove('is-active'); });
+        this.classList.add('is-active');
+      });
+    });
+  </script>
+</body>
+</html>

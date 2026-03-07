@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Book Now — Grey's Gift Lodge | Eastern Cape, South Africa</title>
+  <meta name="description" content="Contact Grey's Gift Lodge to plan your Eastern Cape hunting safari or family getaway. We'd love to welcome you to our malaria-free 10,000-hectare wilderness estate." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navigation.css" />
+  <style>
+    .info-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-md);
+      margin-bottom: var(--space-xl);
+    }
+    @media (max-width: 900px) {
+      .info-cards-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .info-cards-grid { grid-template-columns: 1fr; }
+    }
+
+    .info-card-contact {
+      background: var(--color-warm-white);
+      border: 1px solid var(--color-border);
+      padding: 2rem;
+      border-radius: var(--radius);
+      text-align: center;
+    }
+
+    .info-card-contact__icon {
+      width: 52px;
+      height: 52px;
+      background: var(--color-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+    }
+
+    .info-card-contact__icon svg {
+      width: 24px;
+      height: 24px;
+      color: #fff;
+    }
+
+    .info-card-contact__label {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .info-card-contact__title {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--color-text-heading);
+      margin-bottom: 0.4rem;
+    }
+
+    .info-card-contact__detail {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      line-height: 1.7;
+    }
+
+    .info-card-contact__detail a {
+      color: var(--color-gold);
+      text-decoration: none;
+    }
+
+    .info-card-contact__detail a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: var(--space-xl);
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+
+    .contact-aside {
+      position: sticky;
+      top: 120px;
+    }
+
+    .contact-aside__heading {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      color: var(--color-text-heading);
+      margin-bottom: 1rem;
+    }
+
+    .contact-aside__text {
+      color: var(--color-text-light);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-aside__detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+    }
+
+    .contact-aside__detail svg {
+      width: 18px;
+      height: 18px;
+      color: var(--color-gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .contact-aside__detail a {
+      color: var(--color-text-light);
+      text-decoration: none;
+    }
+
+    .contact-aside__detail a:hover {
+      color: var(--color-gold);
+    }
+
+    .contact-aside__hours {
+      background: var(--color-cream);
+      border-left: 3px solid var(--color-gold);
+      padding: 1rem 1.2rem;
+      margin-top: 1.5rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .contact-aside__hours-title {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-aside__hours-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      padding: 0.2rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .contact-aside__hours-row:last-child {
+      border-bottom: none;
+    }
+
+    .form-section-title {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: var(--color-text-heading);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-bottom: 1.8rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .form-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-text-light);
+    }
+
+    .form-control {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 0.7rem 1rem;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--color-text);
+      background: var(--color-warm-white);
+      width: 100%;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--color-gold);
+      box-shadow: 0 0 0 3px rgba(201,169,110,0.15);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    .form-submit-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .form-privacy {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+    }
+
+    .form-success {
+      display: none;
+      padding: 1rem 1.2rem;
+      background: rgba(107,140,90,0.12);
+      border-left: 3px solid #6B8C5A;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      color: #3A5A3A;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .map-placeholder {
+      width: 100%;
+      height: 380px;
+      background: linear-gradient(135deg, #2D3B2D 0%, #3E5A3E 40%, #6B8C5A 70%, #9BA870 100%);
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.6);
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      gap: 0.5rem;
+      margin-top: var(--space-md);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header site-header--solid" id="site-header">
+    <div class="container">
+      <div class="topbar">
+        <div class="topbar__inner">
+          <div class="topbar__left">
+            <a href="tel:+27460000000" class="topbar__item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"/></svg>
+              +27 (0)46 000 0000
+            </a>
+            <a href="mailto:info@greysgiftlodge.co.za" class="topbar__item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+              info@greysgiftlodge.co.za
+            </a>
+          </div>
+          <div class="topbar__right">Malaria-Free &bull; Eastern Cape</div>
+        </div>
+      </div>
+      <div class="header-main">
+        <a href="index.html" class="site-logo">
+          <span class="site-logo__name">Grey's Gift Lodge</span>
+          <span class="site-logo__tag">Eastern Cape · South Africa</span>
+        </a>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+          <div class="nav-item nav-item--drop">
+            <a href="about.html" class="nav-link">About <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 011.06 0L10 11.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 9.28a.75.75 0 010-1.06z" clip-rule="evenodd"/></svg></a>
+            <div class="nav-drop"><a href="about.html#the-lodge">The Lodge</a><a href="about.html#our-story">Our Story</a><a href="about.html#location">Location</a></div>
+          </div>
+          <div class="nav-item nav-item--drop">
+            <a href="accommodation.html" class="nav-link">Accommodation <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 011.06 0L10 11.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 9.28a.75.75 0 010-1.06z" clip-rule="evenodd"/></svg></a>
+            <div class="nav-drop"><a href="accommodation.html#rooms">Lodge Rooms</a><a href="accommodation.html#facilities">Facilities</a></div>
+          </div>
+          <div class="nav-item nav-item--drop">
+            <a href="hunting.html" class="nav-link">Hunting <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 011.06 0L10 11.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 9.28a.75.75 0 010-1.06z" clip-rule="evenodd"/></svg></a>
+            <div class="nav-drop"><a href="hunting.html#packages">Safari Packages</a><a href="hunting.html#species">Game Species</a></div>
+          </div>
+          <div class="nav-item nav-item--drop">
+            <a href="experiences.html" class="nav-link">Experiences <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 011.06 0L10 11.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 9.28a.75.75 0 010-1.06z" clip-rule="evenodd"/></svg></a>
+            <div class="nav-drop"><a href="experiences.html#wildlife">Nature &amp; Wildlife</a><a href="experiences.html#family">Family Activities</a><a href="experiences.html#photography">Photography</a></div>
+          </div>
+          <div class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></div>
+          <div class="nav-item"><a href="contact.html" class="nav-link nav-link--book is-active">Book Now</a></div>
+        </nav>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <div class="mobile-nav__item"><div class="mobile-nav__row"><a href="index.html" class="mobile-nav__link">Home</a></div></div>
+    <div class="mobile-nav__item">
+      <div class="mobile-nav__row"><a href="about.html" class="mobile-nav__link">About</a><button class="mobile-nav__expand" aria-label="Expand">+</button></div>
+      <div class="mobile-nav__sub"><a href="about.html#the-lodge" class="mobile-nav__sub-link">The Lodge</a></div>
+    </div>
+    <div class="mobile-nav__item">
+      <div class="mobile-nav__row"><a href="accommodation.html" class="mobile-nav__link">Accommodation</a><button class="mobile-nav__expand" aria-label="Expand">+</button></div>
+      <div class="mobile-nav__sub"><a href="accommodation.html#rooms" class="mobile-nav__sub-link">Lodge Rooms</a></div>
+    </div>
+    <div class="mobile-nav__item">
+      <div class="mobile-nav__row"><a href="hunting.html" class="mobile-nav__link">Hunting</a><button class="mobile-nav__expand" aria-label="Expand">+</button></div>
+      <div class="mobile-nav__sub"><a href="hunting.html#packages" class="mobile-nav__sub-link">Safari Packages</a></div>
+    </div>
+    <div class="mobile-nav__item">
+      <div class="mobile-nav__row"><a href="experiences.html" class="mobile-nav__link">Experiences</a><button class="mobile-nav__expand" aria-label="Expand">+</button></div>
+      <div class="mobile-nav__sub"><a href="experiences.html#wildlife" class="mobile-nav__sub-link">Nature &amp; Wildlife</a></div>
+    </div>
+    <div class="mobile-nav__item"><div class="mobile-nav__row"><a href="gallery.html" class="mobile-nav__link">Gallery</a></div></div>
+    <a href="contact.html" class="mobile-nav__book">Book Your Safari</a>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <div class="page-hero">
+    <section class="hero hero-contact hero--short" aria-label="Contact and bookings">
+      <div class="hero__bg"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <span class="hero__label">We'd Love to Hear From You</span>
+        <h1 class="hero__title">Plan Your <em>Safari</em></h1>
+        <p class="hero__subtitle">Whether you're planning a hunting safari, a family escape, or simply want to know more — our team is here to craft your perfect Eastern Cape experience.</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb__sep">›</li>
+        <li class="breadcrumb__item breadcrumb__item--current">Contact &amp; Book Now</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ═══ QUICK CONTACT CARDS ═══ -->
+  <section class="section section--cream" style="padding-bottom: 0;">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--space-lg);">
+        <span class="section__label">Get In Touch</span>
+        <h2 class="section__title section__title--center">How To Reach Us</h2>
+        <div class="section__divider section__divider--center"></div>
+        <p class="section__intro section__intro--center">Grey's Gift Lodge is located in the heart of the Eastern Cape. We're happy to assist with all enquiries and reservations.</p>
+      </div>
+      <div class="info-cards-grid">
+        <div class="info-card-contact">
+          <div class="info-card-contact__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="info-card-contact__label">Call Us</span>
+          <div class="info-card-contact__title">Phone &amp; WhatsApp</div>
+          <div class="info-card-contact__detail">
+            <a href="tel:+27460000000">+27 (0)46 000 0000</a><br>
+            Available Mon–Sat, 8am–5pm<br>
+            <a href="https://wa.me/27460000000" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+          </div>
+        </div>
+        <div class="info-card-contact">
+          <div class="info-card-contact__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+          </div>
+          <span class="info-card-contact__label">Email Us</span>
+          <div class="info-card-contact__title">Email Enquiries</div>
+          <div class="info-card-contact__detail">
+            <a href="mailto:info@greysgiftlodge.co.za">info@greysgiftlodge.co.za</a><br>
+            <a href="mailto:hunting@greysgiftlodge.co.za">hunting@greysgiftlodge.co.za</a><br>
+            We reply within one business day
+          </div>
+        </div>
+        <div class="info-card-contact">
+          <div class="info-card-contact__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.013 3.5-4.661 3.5-8.327a8 8 0 10-16 0c0 3.666 1.556 6.314 3.5 8.327a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="info-card-contact__label">Find Us</span>
+          <div class="info-card-contact__title">Physical Address</div>
+          <div class="info-card-contact__detail">
+            Farm Grey's Gift<br>
+            Eastern Cape, 6140<br>
+            South Africa
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT FORM + ASIDE ═══ -->
+  <section class="section section--cream" id="contact-form-section">
+    <div class="container">
+      <div class="contact-layout">
+        <!-- Form -->
+        <div>
+          <p class="form-section-title">Send Us a Message</p>
+          <p class="form-note">Fill in the form below and one of our friendly team members will be in touch to discuss your visit.</p>
+
+          <form id="contact-form" novalidate>
+            <div style="display:flex;flex-direction:column;gap:1rem;">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="f-name">First Name <span aria-hidden="true" style="color:var(--color-gold);">*</span></label>
+                  <input class="form-control" type="text" id="f-name" name="first_name" placeholder="Jane" autocomplete="given-name" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="f-surname">Last Name <span aria-hidden="true" style="color:var(--color-gold);">*</span></label>
+                  <input class="form-control" type="text" id="f-surname" name="last_name" placeholder="Smith" autocomplete="family-name" required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="f-email">Email Address <span aria-hidden="true" style="color:var(--color-gold);">*</span></label>
+                  <input class="form-control" type="email" id="f-email" name="email" placeholder="jane@example.com" autocomplete="email" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="f-phone">Phone Number</label>
+                  <input class="form-control" type="tel" id="f-phone" name="phone" placeholder="+27 00 000 0000" autocomplete="tel" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="f-type">Type of Enquiry <span aria-hidden="true" style="color:var(--color-gold);">*</span></label>
+                  <select class="form-control" id="f-type" name="enquiry_type" required>
+                    <option value="" disabled selected>Select an option…</option>
+                    <option value="hunting">Hunting Safari</option>
+                    <option value="accommodation">Accommodation Only</option>
+                    <option value="experiences">Experiences &amp; Activities</option>
+                    <option value="family">Family Getaway</option>
+                    <option value="photography">Photography Safari</option>
+                    <option value="general">General Enquiry</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="f-guests">Number of Guests</label>
+                  <select class="form-control" id="f-guests" name="guests">
+                    <option value="" disabled selected>Select…</option>
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3-4">3–4 Guests</option>
+                    <option value="5-6">5–6 Guests</option>
+                    <option value="7+">7 or more</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="f-arrival">Preferred Arrival Date</label>
+                  <input class="form-control" type="date" id="f-arrival" name="arrival_date" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="f-departure">Preferred Departure Date</label>
+                  <input class="form-control" type="date" id="f-departure" name="departure_date" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="f-message">Your Message</label>
+                <textarea class="form-control" id="f-message" name="message" placeholder="Tell us about your ideal visit — hunting plans, activities you're interested in, any dietary requirements, and any questions you might have…"></textarea>
+              </div>
+              <div class="form-group">
+                <label style="display:flex;align-items:flex-start;gap:0.5rem;cursor:pointer;font-size:0.82rem;color:var(--color-text-light);">
+                  <input type="checkbox" id="f-consent" name="consent" style="margin-top:3px;accent-color:var(--color-gold);" required />
+                  I agree to Grey's Gift Lodge processing my personal information to respond to this enquiry in accordance with the <a href="#" style="color:var(--color-gold);">Privacy Policy</a>.
+                </label>
+              </div>
+              <div class="form-submit-row">
+                <button type="submit" class="btn btn--gold">Send Enquiry</button>
+                <span class="form-privacy">We will never share your details with third parties.</span>
+              </div>
+              <div class="form-success" id="form-success-msg" role="alert">
+                <strong>Thank you!</strong> Your enquiry has been received. We'll be in touch within one business day.
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Aside -->
+        <aside class="contact-aside">
+          <h2 class="contact-aside__heading">Plan Your Visit</h2>
+          <p class="contact-aside__text">Grey's Gift Lodge is open year-round. Our peak hunting season runs from March to October, with wildlife viewing exceptional in all months. Minimum safari packages start at 3 nights.</p>
+
+          <div class="contact-aside__detail">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.013 3.5-4.661 3.5-8.327a8 8 0 10-16 0c0 3.666 1.556 6.314 3.5 8.327a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+            <span>Farm Grey's Gift, Eastern Cape, South Africa, 6140</span>
+          </div>
+          <div class="contact-aside__detail">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"/></svg>
+            <a href="tel:+27460000000">+27 (0)46 000 0000</a>
+          </div>
+          <div class="contact-aside__detail">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+            <a href="mailto:info@greysgiftlodge.co.za">info@greysgiftlodge.co.za</a>
+          </div>
+
+          <div class="contact-aside__hours">
+            <div class="contact-aside__hours-title">Office Hours</div>
+            <div class="contact-aside__hours-row"><span>Monday – Friday</span><span>8:00am – 5:00pm</span></div>
+            <div class="contact-aside__hours-row"><span>Saturday</span><span>8:00am – 1:00pm</span></div>
+            <div class="contact-aside__hours-row"><span>Sunday</span><span>Emergencies Only</span></div>
+          </div>
+
+          <!-- Map Placeholder -->
+          <div class="map-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="40" height="40" style="color:rgba(255,255,255,0.5);"><path fill-rule="evenodd" d="M8.161 2.58a1.875 1.875 0 011.678 0l4.993 2.498c.106.052.23.052.336 0l3.869-1.935A1.875 1.875 0 0121.75 4.82v12.485c0 .71-.401 1.36-1.037 1.677l-4.875 2.437a1.875 1.875 0 01-1.676 0l-4.994-2.497a.375.375 0 00-.336 0l-3.868 1.935A1.875 1.875 0 012.25 19.18V6.695c0-.71.401-1.36 1.036-1.677l4.875-2.437zM9 6a.75.75 0 01.75.75V15a.75.75 0 01-1.5 0V6.75A.75.75 0 019 6zm6.75 3a.75.75 0 00-1.5 0v8.25a.75.75 0 001.5 0V9z" clip-rule="evenodd" /></svg>
+            Map placeholder — embed Google Maps here
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GETTING HERE ═══ -->
+  <section class="section section--dark" id="getting-here">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--space-xl);">
+        <span class="section__label section__label--gold">Getting Here</span>
+        <h2 class="section__title section__title--center" style="color:var(--color-warm-white);">Arriving at Grey's Gift</h2>
+        <div class="section__divider section__divider--center"></div>
+      </div>
+      <div class="cards cards--3">
+        <div class="card card--dark">
+          <div class="card__icon-wrap" style="color:var(--color-gold);">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z"/></svg>
+          </div>
+          <span class="card__label">By Air</span>
+          <h3 class="card__title" style="color:var(--color-warm-white);">Port Elizabeth / Gqeberha</h3>
+          <p class="card__text" style="color:rgba(255,255,255,0.7);">Fly into OR Tambo Gqeberha Airport (PLZ). Grey's Gift Lodge is approximately 2 hours by road. Airport transfer can be arranged upon request.</p>
+        </div>
+        <div class="card card--dark">
+          <div class="card__icon-wrap" style="color:var(--color-gold);">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M3.375 4.5C2.339 4.5 1.5 5.34 1.5 6.375V13.5h12V6.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM13.5 15h-12v2.625c0 1.035.84 1.875 1.875 1.875h.375a3 3 0 116 0h3a.75.75 0 00.75-.75V15z"/><path d="M8.25 19.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0zM15.75 6.75a.75.75 0 00-.75.75v11.25c0 .087.015.17.042.248a3 3 0 015.958.464c.853-.175 1.522-.935 1.464-1.883a18.659 18.659 0 00-3.732-10.104 1.837 1.837 0 00-1.47-.725H15.75z"/><path d="M19.5 19.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z"/></svg>
+          </div>
+          <span class="card__label">By Road</span>
+          <h3 class="card__title" style="color:var(--color-warm-white);">Self-Drive from Makhanda</h3>
+          <p class="card__text" style="color:rgba(255,255,255,0.7);">Approximately 40 minutes from Makhanda (Grahamstown) via the R67. Detailed GPS co-ordinates and route notes will be sent with your booking confirmation.</p>
+        </div>
+        <div class="card card--dark">
+          <div class="card__icon-wrap" style="color:var(--color-gold);">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path fill-rule="evenodd" d="M7.5 5.25a3 3 0 013-3h3a3 3 0 013 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0112 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 017.5 5.455V5.25zm7.5 0v.09a49.488 49.488 0 00-6 0v-.09a1.5 1.5 0 011.5-1.5h3a1.5 1.5 0 011.5 1.5zm-3 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd"/><path d="M3 18.4v-2.796a4.3 4.3 0 00.713.31A26.226 26.226 0 0012 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 01-6.477-.427C4.047 21.128 3 19.852 3 18.4z"/></svg>
+          </div>
+          <span class="card__label">Transfers</span>
+          <h3 class="card__title" style="color:var(--color-warm-white);">Arranged Transfers</h3>
+          <p class="card__text" style="color:rgba(255,255,255,0.7);">Lodge-to-airport transfer services available from PLZ, East London or King William's Town. Contact us when booking to arrange door-to-door collection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <span class="footer__logo-name">Grey's Gift Lodge</span>
+          <span class="footer__logo-tag">Eastern Cape · South Africa</span>
+          <p class="footer__desc">A luxury hunting safari and family lodge nestled in the heart of the malaria-free Eastern Cape. Five generations of heritage, sharing the beauty of the African bush.</p>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/greysgiftlodge/" class="footer__social-btn" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
+            <a href="https://www.instagram.com/greysgiftlodge/" class="footer__social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer">&#9711;</a>
+            <a href="https://www.youtube.com/channel/UCYD1MvRiYoMQzRl5iA0lKMA" class="footer__social-btn" aria-label="YouTube" target="_blank" rel="noopener noreferrer">&#9654;</a>
+          </div>
+        </div>
+        <div>
+          <span class="footer__col-title">Explore</span>
+          <div class="footer__links">
+            <a href="index.html">Home</a><a href="about.html">About the Lodge</a>
+            <a href="accommodation.html">Accommodation</a><a href="hunting.html">Hunting Safaris</a>
+            <a href="experiences.html">Experiences</a><a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+        <div>
+          <span class="footer__col-title">Plan Your Visit</span>
+          <div class="footer__links">
+            <a href="about.html#location">Getting Here</a>
+            <a href="hunting.html#packages">Safari Packages</a>
+            <a href="accommodation.html#facilities">Facilities</a>
+            <a href="experiences.html#family">Family Activities</a>
+            <a href="contact.html">Make an Enquiry</a>
+          </div>
+        </div>
+        <div>
+          <span class="footer__col-title">Find Us</span>
+          <div class="footer__contact-row">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.013 3.5-4.661 3.5-8.327a8 8 0 10-16 0c0 3.666 1.556 6.314 3.5 8.327a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+            <span>Farm Grey's Gift, Eastern Cape<br>South Africa, 6140</span>
+          </div>
+          <div class="footer__contact-row">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"/></svg>
+            <a href="tel:+27460000000">+27 (0)46 000 0000</a>
+          </div>
+          <div class="footer__contact-row">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+            <a href="mailto:info@greysgiftlodge.co.za">info@greysgiftlodge.co.za</a>
+          </div>
+          <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-gold);display:block;margin-top:1.5rem;margin-bottom:0.5rem;">Stay Updated</span>
+          <form class="footer__newsletter-form">
+            <input type="email" class="footer__nl-input" placeholder="Your email address" aria-label="Newsletter email" />
+            <button type="submit" class="footer__nl-btn">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Grey's Gift Lodge. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Enhanced contact form handling
+    (function() {
+      var form = document.getElementById('contact-form');
+      var successMsg = document.getElementById('form-success-msg');
+      if (!form) return;
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Basic validation
+        var required = form.querySelectorAll('[required]');
+        var valid = true;
+        required.forEach(function(el) {
+          if (!el.value.trim()) {
+            valid = false;
+            el.style.borderColor = '#c0392b';
+            el.addEventListener('input', function() { el.style.borderColor = ''; }, { once: true });
+          }
+        });
+        if (!valid) return;
+
+        // Prototype: show success message
+        form.querySelector('button[type="submit"]').disabled = true;
+        form.querySelector('button[type="submit"]').textContent = 'Sending…';
+        setTimeout(function() {
+          successMsg.style.display = 'block';
+          form.querySelector('button[type="submit"]').style.display = 'none';
+        }, 800);
+      });
+    })();
+  </script>
+</body>
+</html>
