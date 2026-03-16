@@ -347,7 +347,7 @@ button { font-family: var(--font-body); }
 
 /* ── Hero Backgrounds — Picsum Photos (free, seeded, consistent) */
 .hero-home .hero__bg {
-  background-image: url('https://picsum.photos/seed/gg-home/1920/1080');
+  background-image: url('../img/IMG-01.jpg');
   background-color: #2D3B2D;
 }
 .hero-about .hero__bg {
