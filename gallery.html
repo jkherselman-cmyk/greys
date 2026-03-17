@@ -94,6 +94,11 @@
 
   <div class="mobile-nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <button class="mobile-nav__close" id="mobile-nav-close" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+        <path d="M6.225 4.811a1 1 0 00-1.414 1.414L10.586 12 4.81 17.775a1 1 0 101.414 1.414L12 13.414l5.775 5.775a1 1 0 001.414-1.414L13.414 12l5.775-5.775a1 1 0 00-1.414-1.414L12 10.586 6.225 4.81z"/>
+      </svg>
+    </button>
     <div class="mobile-nav__item"><div class="mobile-nav__row"><a href="index.html" class="mobile-nav__link">Home</a></div></div>
     <div class="mobile-nav__item">
       <div class="mobile-nav__row"><a href="about.html" class="mobile-nav__link">About</a><button class="mobile-nav__expand" aria-label="Expand">+</button></div>
@@ -155,55 +160,197 @@
         <button class="gallery-filter-btn">Landscapes</button>
         <button class="gallery-filter-btn">The Lodge</button>
         <button class="gallery-filter-btn">Hunting</button>
+        <button class="gallery-filter-btn">Videos</button>
       </div>
 
       <!-- Gallery Grid -->
       <div class="gallery-grid">
-        <div class="gallery-item gallery-item--tall">
-          <div class="img-ph" style="height:100%;"></div>
-          <div class="gallery-item__overlay">
-            <div class="gallery-item__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg>
-            </div>
-          </div>
+        <!-- Row 1 -->
+        <div class="gallery-item gallery-item--tall" data-category="wildlife" data-type="image">
+          <img src="img/IMG-01.jpg" alt="Grey's Gift Lodge">
         </div>
-        <div class="gallery-item">
-          <div class="img-ph--brown" style="height:100%;"></div>
-          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg></div></div>
+        <div class="gallery-item" data-category="landscapes" data-type="image">
+          <img src="img/IMG-02.jpg" alt="Wildlife at Grey's Gift">
         </div>
-        <div class="gallery-item">
-          <div class="img-ph--warm" style="height:100%;"></div>
-          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg></div></div>
+        <div class="gallery-item" data-category="the-lodge" data-type="image">
+          <img src="img/IMG-03.jpg" alt="Eastern Cape landscape">
         </div>
-        <div class="gallery-item gallery-item--wide">
-          <div class="img-ph--dark" style="height:100%;"></div>
-          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg></div></div>
+        <div class="gallery-item gallery-item--wide" data-category="wildlife" data-type="video">
+          <video muted loop playsinline>
+            <source src="vid/VID-01.mp4" type="video/mp4">
+          </video>
         </div>
-        <div class="gallery-item">
-          <div class="img-ph" style="background-image:url('https://picsum.photos/seed/gg-g5/800/600');height:100%;"></div>
-          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg></div></div>
+        
+        <!-- Row 2 -->
+        <div class="gallery-item" data-category="hunting" data-type="image">
+          <img src="img/IMG-04.jpg" alt="Safari experience">
         </div>
-        <div class="gallery-item">
-          <div class="img-ph--brown" style="background-image:url('https://picsum.photos/seed/gg-g6/800/600');height:100%;"></div>
-          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg></div></div>
+        <div class="gallery-item" data-category="the-lodge" data-type="image">
+          <img src="img/IMG-05.jpg" alt="Lodge accommodation">
         </div>
-        <div class="gallery-item">
-          <div class="img-ph--dark" style="height:100%;"></div>
-          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg></div></div>
+        <div class="gallery-item" data-category="wildlife" data-type="image">
+          <img src="img/IMG-06.jpg" alt="Wildlife photography">
         </div>
-        <div class="gallery-item">
-          <div class="img-ph--warm" style="height:100%;"></div>
-          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg></div></div>
+        <div class="gallery-item" data-category="landscapes" data-type="image">
+          <img src="img/IMG-07.jpg" alt="Eastern Cape nature">
         </div>
-        <div class="gallery-item">
-          <div class="img-ph" style="height:100%;"></div>
-          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd"/></svg></div></div>
+        <div class="gallery-item" data-category="landscapes" data-type="image">
+          <img src="img/IMG-08.jpg" alt="Grey's Gift landscape">
+        </div>
+
+        <!-- Row 3 -->
+        <div class="gallery-item gallery-item--wide" data-category="landscapes" data-type="image">
+          <img src="img/IMG-09.jpg" alt="Panoramic view">
+        </div>
+        <div class="gallery-item gallery-item--tall" data-category="wildlife" data-type="image">
+          <img src="img/IMG-10.jpg" alt="Wildlife portrait">
+        </div>
+        <div class="gallery-item" data-category="hunting" data-type="video">
+          <video muted loop playsinline>
+            <source src="vid/VID-02.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="gallery-item" data-category="the-lodge" data-type="image">
+          <img src="img/IMG-11.jpg" alt="Lodge exterior">
+        </div>
+
+        <!-- Row 4 -->
+        <div class="gallery-item" data-category="hunting" data-type="image">
+          <img src="img/IMG-12.jpg" alt="Safari hunting">
+        </div>
+        <div class="gallery-item" data-category="wildlife" data-type="image">
+          <img src="img/IMG-13.jpg" alt="Game viewing">
+        </div>
+        <div class="gallery-item" data-category="landscapes" data-type="image">
+          <img src="img/IMG-14.jpg" alt="Eastern Cape flora">
+        </div>
+        <div class="gallery-item" data-category="landscapes" data-type="video">
+          <video muted loop playsinline>
+            <source src="vid/VID-03.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="gallery-item" data-category="wildlife" data-type="image">
+          <img src="img/IMG-15.jpg" alt="Wildlife sighting">
+        </div>
+
+        <!-- Row 5 -->
+        <div class="gallery-item gallery-item--tall" data-category="landscapes" data-type="image">
+          <img src="img/IMG-16.jpg" alt="Dramatic landscape">
+        </div>
+        <div class="gallery-item" data-category="the-lodge" data-type="image">
+          <img src="img/IMG-17.jpg" alt="Lodge interior">
+        </div>
+        <div class="gallery-item" data-category="hunting" data-type="image">
+          <img src="img/IMG-18.jpg" alt="Safari activity">
+        </div>
+        <div class="gallery-item gallery-item--wide" data-category="landscapes" data-type="image">
+          <img src="img/IMG-19.jpg" alt="Wide landscape shot">
+        </div>
+
+        <!-- Row 6 -->
+        <div class="gallery-item" data-category="wildlife" data-type="image">
+          <img src="img/IMG-20.jpg" alt="Wildlife closeup">
+        </div>
+        <div class="gallery-item" data-category="the-lodge" data-type="video">
+          <video muted loop playsinline>
+            <source src="vid/VID-04.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="gallery-item" data-category="landscapes" data-type="image">
+          <img src="img/IMG-21.jpg" alt="Nature scene">
+        </div>
+        <div class="gallery-item" data-category="the-lodge" data-type="image">
+          <img src="img/IMG-22.jpg" alt="Lodge amenities">
+        </div>
+        <div class="gallery-item" data-category="wildlife" data-type="image">
+          <img src="img/IMG-23.jpg" alt="Bush landscape">
+        </div>
+
+        <!-- Row 7 -->
+        <div class="gallery-item gallery-item--wide" data-category="wildlife" data-type="video">
+          <video muted loop playsinline>
+            <source src="vid/VID-05.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="gallery-item gallery-item--tall" data-category="hunting" data-type="image">
+          <img src="img/IMG-24.jpg" alt="Vertical wildlife">
+        </div>
+        <div class="gallery-item" data-category="wildlife" data-type="image">
+          <img src="img/IMG-25.jpg" alt="Safari moment">
+        </div>
+        <div class="gallery-item" data-category="landscapes" data-type="image">
+          <img src="img/IMG-26.jpg" alt="Eastern Cape sunset">
+        </div>
+
+        <!-- Row 8 -->
+        <div class="gallery-item" data-category="the-lodge" data-type="image">
+          <img src="img/IMG-27.jpg" alt="Lodge comfort">
+        </div>
+        <div class="gallery-item" data-category="wildlife" data-type="image">
+          <img src="img/IMG-28.jpg" alt="Game animals">
+        </div>
+        <div class="gallery-item" data-category="hunting" data-type="video">
+          <video muted loop playsinline>
+            <source src="vid/VID-06.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="gallery-item" data-category="landscapes" data-type="image">
+          <img src="img/IMG-29.jpg" alt="Natural beauty">
+        </div>
+        <div class="gallery-item" data-category="hunting" data-type="image">
+          <img src="img/IMG-30.jpg" alt="Safari experience">
+        </div>
+
+        <!-- Row 9 -->
+        <div class="gallery-item gallery-item--tall" data-category="landscapes" data-type="image">
+          <img src="img/IMG-31.jpg" alt="Tall landscape">
+        </div>
+        <div class="gallery-item" data-category="wildlife" data-type="image">
+          <img src="img/IMG-32.jpg" alt="Wildlife habitat">
+        </div>
+        <div class="gallery-item" data-category="the-lodge" data-type="image">
+          <img src="img/IMG-33.jpg" alt="Lodge grounds">
+        </div>
+        <div class="gallery-item gallery-item--wide" data-category="landscapes" data-type="video">
+          <video muted loop playsinline>
+            <source src="vid/VID-07.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- Row 10 -->
+        <div class="gallery-item" data-category="wildlife" data-type="image">
+          <img src="img/IMG-34.jpg" alt="Nature photography">
+        </div>
+        <div class="gallery-item" data-category="hunting" data-type="image">
+          <img src="img/IMG-35.jpg" alt="Safari wildlife">
+        </div>
+        <div class="gallery-item" data-category="wildlife" data-type="video">
+          <video muted loop playsinline>
+            <source src="vid/VID-08.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="gallery-item" data-category="landscapes" data-type="image">
+          <img src="img/IMG-36.jpg" alt="Eastern Cape vista">
+        </div>
+        <div class="gallery-item" data-category="the-lodge" data-type="image">
+          <img src="img/IMG-37.jpg" alt="Lodge life">
+        </div>
+
+        <!-- Final items -->
+        <div class="gallery-item gallery-item--wide" data-category="landscapes" data-type="image">
+          <img src="img/IMG-38.jpg" alt="Panoramic landscape">
+        </div>
+        <div class="gallery-item" data-category="hunting" data-type="video">
+          <video muted loop playsinline>
+            <source src="vid/VID-09.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="gallery-item" data-category="the-lodge" data-type="video">
+          <video muted loop playsinline>
+            <source src="vid/VID-10.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
-
-      <p style="text-align:center;font-size:0.8rem;color:var(--color-text-muted);margin-top:var(--space-lg);">
-        Placeholder images from <a href="https://picsum.photos" target="_blank" rel="noopener noreferrer" style="color:var(--color-gold);">Picsum Photos</a> (free, no sign-up). Swap any image by replacing the seed in the URL, or swap the entire &lt;div&gt; with an &lt;img&gt; tag when you have real photography.
-      </p>
     </div>
   </section>
 
@@ -289,11 +436,57 @@
 
   <script src="js/main.js"></script>
   <script>
-    // Gallery filter tabs (visual only for now)
+    // Gallery filter functionality
     document.querySelectorAll('.gallery-filter-btn').forEach(function(btn) {
       btn.addEventListener('click', function() {
-        document.querySelectorAll('.gallery-filter-btn').forEach(function(b) { b.classList.remove('is-active'); });
+        // Update active state
+        document.querySelectorAll('.gallery-filter-btn').forEach(function(b) { 
+          b.classList.remove('is-active'); 
+        });
         this.classList.add('is-active');
+        
+        // Get filter value
+        var filterValue = this.textContent.toLowerCase().replace(/\s+/g, '-');
+        
+        // Filter items
+        document.querySelectorAll('.gallery-item').forEach(function(item) {
+          if (filterValue === 'all') {
+            item.style.display = 'block';
+          } else if (filterValue === 'videos') {
+            // Show only video items
+            if (item.getAttribute('data-type') === 'video') {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          } else {
+            if (item.getAttribute('data-category') === filterValue) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+
+    // Video hover playback
+    document.querySelectorAll('.gallery-item video').forEach(function(video) {
+      video.addEventListener('mouseenter', function() {
+        this.play();
+      });
+      video.addEventListener('mouseleave', function() {
+        this.pause();
+        this.currentTime = 0;
+      });
+      // Play on click for mobile
+      video.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (this.paused) {
+          this.play();
+        } else {
+          this.pause();
+        }
       });
     });
   </script>

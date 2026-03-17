@@ -280,6 +280,36 @@
 
 .mobile-nav.is-open { transform: translateX(0); }
 
+.mobile-nav__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 50%;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.mobile-nav__close:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  transform: rotate(90deg);
+}
+
+.mobile-nav__close svg {
+  width: 20px;
+  height: 20px;
+}
+
 .mobile-nav__item {
   border-bottom: 1px solid rgba(255,255,255,0.07);
 }

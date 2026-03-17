@@ -26,6 +26,7 @@
   const menuToggle  = document.getElementById('menu-toggle');
   const mobileNav   = document.getElementById('mobile-nav');
   const backdrop    = document.getElementById('nav-backdrop');
+  const mobileClose = document.getElementById('mobile-nav-close');
 
   function openMenu() {
     mobileNav.classList.add('is-open');
@@ -46,6 +47,10 @@
       const isOpen = mobileNav.classList.contains('is-open');
       isOpen ? closeMenu() : openMenu();
     });
+  }
+
+  if (mobileClose) {
+    mobileClose.addEventListener('click', closeMenu);
   }
 
   if (backdrop) {
